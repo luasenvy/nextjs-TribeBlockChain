@@ -34,8 +34,8 @@ export default function CareerPage() {
               key={`motion-${i}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5, ease: "easeIn" }}
+              viewport={{ once: true, amount: 0.32 }}
+              transition={{ duration: 0.4, ease: "easeIn" }}
             >
               <ViewTransitionLink href="/contact">
                 <Card color={getColorFromPositionCategory(category)} buttonText="Apply now">

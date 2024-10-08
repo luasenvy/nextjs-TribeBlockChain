@@ -58,8 +58,8 @@ export const FeaturesGrid = () => {
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
+      viewport={{ once: true, amount: 0.32 }}
+      transition={{ duration: 0.4, ease: "easeIn" }}
       className="py-24 overflow-x-clip"
     >
       <div className="container">
@@ -76,12 +76,19 @@ export const FeaturesGrid = () => {
               </p>
               <ul className="flex flex-col gap-8 mt-12">
                 {listItems.map((item) => (
-                  <li key={item} className="flex items-center gap-3">
+                  <motion.li
+                    key={item}
+                    className="flex items-center gap-3"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.32 }}
+                    transition={{ duration: 0.4, ease: "easeIn" }}
+                  >
                     <div className="inline-flex flex-shrink-0 justify-center items-center size-8 outline outline-4 -outline-offset-4 outline-fuchsia-500/10 rounded-full ">
                       <div className="size-1.5 bg-fuchsia-500 rounded-full"></div>
                     </div>
                     <span className="text-xl font-bold">{item}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
               <div className="flex gap-8 mt-12 items-center justify-center lg:justify-start lg:pr-2">

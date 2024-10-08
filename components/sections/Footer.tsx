@@ -101,6 +101,28 @@ export const FooterSection = () => {
             ))}
           </div>
         </div>
+        <div>
+          <p className="text-xs text-zinc-600">
+            Themed by{" "}
+            <a
+              href="https://github.com/JannickPepe/TribeBlockChain"
+              rel="nofollow noopner"
+              target="_blank"
+              className="transition-colors hover:text-fuchsia-500 underline font-semibold"
+            >
+              JannickPepe
+            </a>{" "}
+            &amp; writed nextjs by{" "}
+            <a
+              className="transition-colors hover:text-fuchsia-500 underline font-semibold"
+              target="_blank"
+              rel="nofollow noopner"
+              href="https://www.luas.kr"
+            >
+              luasenvy
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

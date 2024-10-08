@@ -91,7 +91,7 @@ export const HeaderSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
             className="fixed size-full top-0 left-0 z-30 bg-zinc-900"
           >
             <div className="absolute inset-2 rounded-md bg-zinc-800 mt-24 md:mt-28 z-0">
@@ -108,7 +108,7 @@ export const HeaderSection = () => {
                       <motion.li
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, ase: "linear", delay: 0.25 * index }}
+                        transition={{ duration: 0.4, ase: "linear", delay: 0.24 * index }}
                         key={title}
                       >
                         <ViewTransitionLink href={href} onClick={() => setIsOpen((curr) => !curr)}>

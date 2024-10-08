@@ -9,8 +9,8 @@ export default function InteriorHero({ children }: React.PropsWithChildren) {
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
+      viewport={{ once: true, amount: 0.32 }}
+      transition={{ duration: 0.4, ease: "easeIn" }}
       className="py-60 relative overflow-x-clip"
     >
       <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">

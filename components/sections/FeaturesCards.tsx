@@ -60,8 +60,8 @@ export const FeaturesCards = () => {
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
+      viewport={{ once: true, amount: 0.32 }}
+      transition={{ duration: 0.4, ease: "easeIn" }}
       className="py-24 overflow-x-clip md:-mt-28"
     >
       <div className="container">

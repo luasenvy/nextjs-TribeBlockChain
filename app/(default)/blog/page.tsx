@@ -21,8 +21,8 @@ export default function BlogPage() {
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: "easeIn" }}
+        viewport={{ once: true, amount: 0.32 }}
+        transition={{ duration: 0.4, ease: "easeIn" }}
         className="py-60 relative overflow-x-clip"
       >
         <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2">
@@ -61,8 +61,8 @@ export default function BlogPage() {
                   key={`motion-a-${postIndex}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.5, ease: "easeIn" }}
+                  viewport={{ once: true, amount: 0.32 }}
+                  transition={{ duration: 0.4, ease: "easeIn" }}
                   className={twMerge(postIndex % 2 === 0 ? "" : "block md:hidden")}
                 >
                   <ViewTransitionLink href={`/blog/${slug}`}>
@@ -81,8 +81,8 @@ export default function BlogPage() {
                   key={`motion-b-${postIndex}`}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.5, ease: "easeIn" }}
+                  viewport={{ once: true, amount: 0.32 }}
+                  transition={{ duration: 0.4, ease: "easeIn" }}
                   className={twMerge(postIndex % 2 === 0 ? "hidden" : "")}
                 >
                   <ViewTransitionLink href={`/blog/${slug}`}>

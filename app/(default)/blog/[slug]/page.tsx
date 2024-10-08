@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useParams } from "next/navigation";
 
 import InteriorContent from "@/components/InteriorContent";
@@ -39,11 +40,17 @@ export default function PostViewer() {
         </InterierHero>
 
         <InteriorContent>
-          <div className="container">
+          <motion.div
+            className="container"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.32 }}
+            transition={{ duration: 0.4, ease: "easeIn" }}
+          >
             <div className="prose prose-invert prose-lg prose-zinc prose-headings:font-heading prose-headings:font-black prose-h2:text-3xl prose-h2:md:text-4xl prose-h2:lg:text-5xl mx-auto prose-h3:text-2xl prose-h3:md:text-3xl  prose-h3:lg:text-4xl">
               {post?.Component && <post.Component />}
             </div>
-          </div>
+          </motion.div>
         </InteriorContent>
       </>
     )
