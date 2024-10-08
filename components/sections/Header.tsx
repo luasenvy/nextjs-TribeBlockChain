@@ -1,5 +1,6 @@
 "use client";
 
+import classnames from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -55,20 +56,27 @@ export const HeaderSection = () => {
             </div>
             <div className="flex items-center gap-4">
               <CutCornerButton className="hidden md:inline-flex">Get Started</CutCornerButton>
-              <div className="size-10 relative" onClick={() => setIsOpen((curr) => !curr)}>
+              <div
+                className="size-10 relative cursor-pointer group"
+                onClick={() => setIsOpen((curr) => !curr)}
+              >
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div
-                    className={twMerge(
-                      "bg-zinc-300 w-5 h-0.5 -translate-y-1 transition-all duration-500",
-                      isOpen && "translate-y-0 rotate-45"
+                    className={classnames(
+                      twMerge(
+                        "bg-zinc-300 group-hover:bg-fuchsia-400 w-5 h-0.5 -translate-y-1 transition-all duration-500"
+                      ),
+                      { "translate-y-0 rotate-45": isOpen }
                     )}
                   ></div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div
-                    className={twMerge(
-                      "bg-zinc-300 w-5 h-0.5 translate-y-1 transition-all duration-500",
-                      isOpen && "translate-y-0 -rotate-45"
+                    className={classnames(
+                      twMerge(
+                        "bg-zinc-300 group-hover:bg-fuchsia-400 w-5 h-0.5 translate-y-1 transition-all duration-500"
+                      ),
+                      { "-translate-y-0 -rotate-45": isOpen }
                     )}
                   ></div>
                 </div>

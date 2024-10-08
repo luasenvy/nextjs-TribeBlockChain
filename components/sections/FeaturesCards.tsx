@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
@@ -56,7 +57,13 @@ export const FeaturesCards = () => {
   }, [selectedCardIndex, isHovered]);
 
   return (
-    <section className="py-24 overflow-x-clip md:-mt-28">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      className="py-24 overflow-x-clip md:-mt-28"
+    >
       <div className="container">
         <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">
           Discover the feature of BlockChain with BlockForge
@@ -107,6 +114,6 @@ export const FeaturesCards = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -44,7 +44,13 @@ export const HeroSection = () => {
   const cuboidRotate = useTransform(cuboidScrollYProgress, [0, 1], [60, -20]);
 
   return (
-    <section className="py-24 md:py-52 overflow-x-clip">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      className="py-24 md:py-52 overflow-x-clip"
+    >
       <div className="container">
         <p className="uppercase font-extrabold text-center text-zinc-500 tracking-wider">
           Introducing BlockForge
@@ -136,6 +142,6 @@ export const HeroSection = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

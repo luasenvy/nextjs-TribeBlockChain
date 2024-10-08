@@ -21,7 +21,13 @@ export const LatestPosts = () => {
   const marginTop = useTransform(scrollYProgress, [0, 1], [0, 64]);
 
   return (
-    <section className="py-60">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      className="py-60"
+    >
       <div className="container">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">
@@ -75,6 +81,6 @@ export const LatestPosts = () => {
           <CutCornerButton>Read the Blog</CutCornerButton>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

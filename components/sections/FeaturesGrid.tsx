@@ -55,7 +55,13 @@ export const FeaturesGrid = () => {
   const secondHemisphereRotate = useTransform(secondHemisphereScrollYProgress, [0, 1], [-20, 10]); // the rotation direction
 
   return (
-    <section className="py-24 overflow-x-clip">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      className="py-24 overflow-x-clip"
+    >
       <div className="container">
         <div className="flex flex-col gap-56 md:gap-48 lg:gap-80">
           {/* LEFT SIDE CONTENT */}
@@ -157,6 +163,6 @@ export const FeaturesGrid = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -20,7 +20,14 @@ export const CallToActionSection = () => {
   const rotate = useTransform(scrollYProgress, [0, 1], [45, -45]);
 
   return (
-    <section className="py-60 overflow-hidden" ref={sectionRef}>
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+      className="py-60 overflow-hidden"
+      ref={sectionRef}
+    >
       <div className="container">
         <div className="relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -67,6 +74,6 @@ export const CallToActionSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
