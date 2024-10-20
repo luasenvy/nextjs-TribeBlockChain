@@ -2,14 +2,6 @@
 
 [Astro TribeBlockChain Theme](https://github.com/JannickPepe/TribeBlockChain) for [Next.js](https://nextjs.org/)<sub>(14+ App Router)</sub>
 
-## 😵 Function cannot implemented
-
-Failed to implement pagefind module using nextjs.
-
-You can see an example using the pagefind module through the static page build result:
-
-[Add search to your Next.js static site with Pagefind](https://www.petemillspaugh.com/nextjs-search-with-pagefind)
-
 ## Tested Environment
 
 - debian - bookworm
